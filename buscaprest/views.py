@@ -20,7 +20,14 @@ def lista(request):
         return render(request, template_name, context)
     else:
         obj = Prestador.objects.all().order_by('-pk')
-        context = {
-            'obj': obj
-        }
+        context = {'obj': obj}
     return render(request, template_name, context)
+
+
+def prestadores_detail(request, pk):
+    model = Prestador
+    template_name = 'buscaprest/buscaprest_detail.html'
+    detail = Prestador.objects.get(pk=pk)
+    context = {'detail': detail}
+    return render(request, template_name, context)
+

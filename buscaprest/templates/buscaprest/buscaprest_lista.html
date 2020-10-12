@@ -30,7 +30,9 @@
                 {% for item in obj %}
                     <tr>
                         <td>{{item.categoria}}</td>
-                        <td>{{item.prestador}}</td>
+                        <td>
+                            <a href="{{ detail.get_absolute_url }}">{{item.prestador}}</a>
+                        </td>
                         <td>{{item.endereco}}</td>
                         <td>{{item.bairro}}</td>
                         <td>{{item.cep}}</td>

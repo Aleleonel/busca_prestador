@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'buscaprest:buscaprest_list %}">Voltar</a>
+    <h1>{{ detail }}
+        <span class="pull-right">
+            <a href="">
+                <button type="button" class="btn btn-success">
+                    <span class="fa fa-pencil"></span> Editar
+                </button>
+            </a>
+        </span>
+    </h1>
+<div class="col-sm-6">
+    <table class="table table-user-information">
+        <tbody>
+        <tr>
+            <th class="text-right">prestador</th>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+{% endblock content %}
