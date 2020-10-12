@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="col-3 search-div">
+         <form method="GET" id="search-form">
+             <label for="">Escolha a Categoria</label>
+             <input class="form-control" type="text" id="search" name="search">
+             <button type="submit">click Aqui!</button>
+         </form>
+     </div>
+
+    {% for item in obj %}
+
+    <div class="container">
+        <address>
+            <strong>Categoria: {{item.categoria}}</strong><br>
+            <strong>Prestador:</strong> {{item.prestador}}<br>
+            <strong>Endereço:</strong> {{item.endereco}}<br>
+            <strong>Bairro:</strong> {{item.bairro}}<br>
+            <strong>CEP:</strong> {{item.cep}}<br>
+            <strong>Cidade:</strong> {{item.cidade}}<br>
+            <abbr title="Phone">P:</abbr> {{item.telefone2}}
+        </address>
+
+        <address>
+              <strong>Nome completo</strong><br>
+              <a href="mailto:#">first.last@example.com</a>
+        </address>
+
+    </div>
+    {% endfor %}
+
+    {%  for busca in buscando %}
+
+        <div class="container">
+
+            <address>
+                <strong>Categoria: {{busca.categoria}}</strong><br>
+                <strong>Prestador:</strong> {{busca.prestador}}<br>
+                <strong>Endereço:</strong> {{busca.endereco}}<br>
+                <strong>Bairro:</strong> {{busca.bairro}}<br>
+                <strong>CEP:</strong> {{busca.cep}}<br>
+                <strong>Cidade:</strong> {{busca.cidade}}<br>
+                <abbr title="Phone">P:</abbr> {{busca.telefone2}}
+            </address>
+
+            <address>
+                  <strong>Nome completo</strong><br>
+                  <a href="mailto:#">first.last@example.com</a>
+            </address>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

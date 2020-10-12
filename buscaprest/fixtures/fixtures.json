@@ -1,0 +1,496 @@
+[
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 1,
+        "fields": {
+            "categoria": "moto",
+            "prestador": "sidney moto pecas e preparacoes",
+            "endereco": "r. petrarca 113",
+            "bairro": "jardim nossa sra. aparecida",
+            "cidade": "francisco morato",
+            "cep": "07936190",
+            "telefone2": "1144882489"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 2,
+        "fields": {
+            "categoria": "moto",
+            "restador": "leste rr yamaha rua do oratorio 1452",
+            "endereco": "mooca",
+            "bairro": " sao paulo",
+            "cidade": " 23199797",
+            "cep": " xxxxxxxxxx",
+            "telefone2": " xxxxxxxxx"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 3,
+        "fields": {
+            "categoria": "moto",
+            "prestador": "life motos",
+            "endereco": "avenida nordestina 6352",
+            "bairro": " xxxxxx",
+            "cidade": " xxxxxxx",
+            "cep": " xxxxxxx",
+            "telefone2": " xxxxxxxx"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 4,
+        "fields": {
+            "categoria": "moto",
+            "prestador": "cohab motos oficina multi marcas",
+            "endereco": "r. sao francisco do piaui 759",
+            "bairro": "itaquera",
+            "cidade": "sao paulo",
+            "cep": "08215400",
+            "telefone2": "11952151696"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 5,
+        "fields": {
+            "categoria": "moto",
+            "prestador": "four motos pecas",
+            "endereco": " rua yolando malozzi 597",
+            "bairro": " alvinopolis",
+            "cidade": " atibaia",
+            "cep": " 12942450",
+            "telefone2": " 11 44114888"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 6,
+        "fields": {
+            "categoria": "moto",
+            "prestador": "dedel motos",
+            "endereco": "r. eng. silvio alvin soares 351",
+            "bairro": " alvinopolis",
+            "cidade": " atibaia",
+            "cep": "12942520",
+            "telefone2": " 11 44111726"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 7,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "oficina premium funilaria e pintura",
+            "endereco": "av. sao paulo 1109",
+            "bairro": "alvinopolis",
+            "cidade": "atibaia",
+            "cep": " 12942430",
+            "telefone2": "11 34023452"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 8,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "kauan autos funilaria e pintura",
+            "endereco": "franco da rocha",
+            "bairro": "r. cel. domingos ortiz 784",
+            "cidade": " vila zanela",
+            "cep": "07851040",
+            "telefone2": "11963868763"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 9,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "nariscar funilaria e pintura ltda",
+            "endereco": "av. brasilia 671",
+            "bairro": " jd ipe",
+            "cidade": "itatiba",
+            "cep": "1142000837",
+            "telefone2": " xxxxxxxxxx"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 10,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "ney costa auto center",
+            "endereco": "r. antonio maximiliano de almeida 68",
+            "bairro": "cidade luiza",
+            "cidade": "jundiai",
+            "cep": "13214120",
+            "telefone2": "11940176917"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 11,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "prestador lucar funilaria e pintura",
+            "endereco": "r. adriano cantone 100",
+            "bairro": "retiro",
+            "cidade": "jundiai",
+            "cep": "13211240",
+            "telefone2": "1144925492"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 12,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "red reparo automotivo",
+            "endereco": "r. luiz brugnolli 171",
+            "bairro": "jardim do lirio",
+            "cidade": "jundiai",
+            "cep": "13218617",
+            "telefone2": "1145335544"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 13,
+        "fields": {
+            "categoria": "funilaria",
+            "prestador": "promocar diagnostico veicular",
+            "endereco": "rua alguma coisa",
+            "bairro": " sao paulo",
+            "cidade": " 13209210",
+            "cep": " 1158516782",
+            "telefone2": "11947425351"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 14,
+        "fields": {
+            "categoria": "mecanica",
+            "prestador": "responcar import pecas e servicos",
+            "endereco": "rua cruzeiro 820",
+            "bairro": " barra funda",
+            "cidade": "sao paulo",
+            "cep": "01137000",
+            "telefone2": "1136123722"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 15,
+        "fields": {
+            "categoria": "mecanica",
+            "prestador": " mundicar auto",
+            "endereco": "av. vila ema 2190",
+            "bairro": "vila ema",
+            "cidade": "sao paulo",
+            "cep": "03281001",
+            "telefone2": "1120225810"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 16,
+        "fields": {
+            "categoria": "mecanica",
+            "prestador": "renacar 2 funilaria pintura e mecanica",
+            "endereco": "av das colmeias 472",
+            "bairro": "jd umarizal",
+            "cidade": "sao paulo",
+            "cep": "05756350",
+            "telefone2": "1125035579"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 17,
+        "fields": {
+            "categoria": "mecanica",
+            "prestador": "velcar",
+            "endereco": "av. das nacoes 872",
+            "bairro": "parque erasmo assuncao",
+            "cidade": "santo andre",
+            "cep": "09260000",
+            "telefone2": "11941757229"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 18,
+        "fields": {
+            "categoria": "mecanica",
+            "prestador": "fast service",
+            "endereco": "rua sao gabriel",
+            "bairro": "vila belvedere",
+            "cidade": "americana",
+            "cep": "xxxxxxxxxx",
+            "telefone2": "1934683915"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 19,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "auto vidros atibaia",
+            "endereco": "r. alfredo andre 111",
+            "bairro": "jardim brasil",
+            "cidade": " atibaia",
+            "cep": "12940130",
+            "telefone2": "1144130161"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 20,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "alo glass",
+            "endereco": "av. jeronimo de camargo 4500",
+            "bairro": "centro",
+            "cidade": " atibaia",
+            "cep": "xxxxxxxxxx",
+            "telefone2": "12944218"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 21,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "scap pecas e acessorios para auto ltda",
+            "endereco": "rua riachuelo 357",
+            "bairro": "centro",
+            "cidade": "braganca paulista",
+            "cep": "12900390",
+            "telefone2": "1140322755"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 22,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "reauto auto vidros e acessorios",
+            "endereco": "av. 14 de marco 394",
+            "bairro": "vila maria",
+            "cidade": "batatais",
+            "cep": "14315734",
+            "telefone2": " 1637615885"
+    }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 23,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "leandri centro automotivo",
+            "endereco": "av. dr. oswaldo scatena 480",
+            "bairro": "caso",
+            "cidade": "batatais",
+            "cep": "14300000",
+            "telefone2": " 1637616097"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 24,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "alexandre chaveiro e auto vidros",
+            "endereco": "av. dom luis do amaral mouzinho 1783",
+            "bairro": "brodowski",
+            "cidade": "14340000",
+            "cep": "16999968380",
+            "telefone2": " xxxxxxxxxx "
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 25,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "scap pecas e acessorios para autos",
+            "endereco": " rua riachuelo 357",
+            "bairro": "centro",
+            "cidade": "braganca paulista",
+            "cep": "12900390",
+            "telefone2": "1140322755"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 26,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "autoglass",
+            "endereco": "r. carolina florence 1802",
+            "bairro": "jardim nossa sra. auxiliadora",
+            "cidade": "campinas",
+            "cep": "13073076",
+            "telefone2": " 1921150300"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 27,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "planeta auto vidros",
+            "endereco": "r. carolina florence 784",
+            "bairro": "vila nova",
+            "cidade": "campinas",
+            "cep": "13073225",
+            "telefone2": "1932421700"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 28,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "auto vidros santo antonio",
+            "endereco": "r. dr. betim 295",
+            "bairro": "vila marieta",
+            "cidade": "campinas",
+            "cep": "13042020",
+            "telefone2": "1932335955"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 29,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "acessorios 3vias",
+            "endereco": "rua batista raffi 53",
+            "bairro": "jd. nova aparecida",
+            "cidade": "campinas",
+            "cep": "13068601",
+            "telefone2": "1937826060"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 30,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "santa lucia autocenter",
+            "endereco": "av. dos expedicionarios brasileiros 879",
+            "bairro": "coester",
+            "cidade": "fernandopolis",
+            "cep": "15600000",
+            "telefone2": "1734425666"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 34,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "jXautovidros",
+            "endereco": "av 9 de julho 538",
+            "bairro": "jardim padre bento",
+            "cidade": " itu",
+            "cep": " xxxxxxxxxx",
+            "telefone2": "1140233379"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 35,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "auto vidros bruni e bruni",
+            "endereco": "r. antonio meneguini 70",
+            "bairro": "residencial maria fernanda",
+            "cidade": "itu",
+            "cep": " xxxxxxxxxx",
+            "telefone2": "1140225452"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 36,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "binho film sound",
+            "endereco": "r. adelino martins 680",
+            "bairro": "jardim das tulipas",
+            "cidade": "jundiai",
+            "cep": "13212600",
+            "telefone2": "11953026661"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 37,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "fernando vidros automotivos",
+            "endereco": "r. do centenario 168",
+            "bairro": "vila nova jundiai",
+            "cidade": "jundiai",
+            "cep": "13210660",
+            "telefone2": "1145268487"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 38,
+        "fields": {
+            "categoria": "vidro",
+            "prestador": "hollyvidros",
+            "endereco": "r. italia 16",
+            "bairro": "jardim bonfiglioli",
+            "cidade": "jundiai",
+            "cep": "13207280",
+            "telefone2": "1145878125"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 39,
+        "fields": {
+                "Categoria": "vidro",
+                "Prestador": "auto vidros",
+                "Endereco": "av. ver. belarmino pereira de carvalho 190",
+                "Bairro": "riacho grande",
+                "Cidade": "mairipora",
+                "cep": "07600000",
+                "Telefone2": "1146046911"
+            }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 40,
+        "fields": {
+                "categoria": "vidro",
+                "prestador": "byzord auto vitrais",
+                "endereco": "parque dr. barbosa de oliveira 10",
+                "bairro": "centro",
+                "cidade": "taubate",
+                "cep": "12020190",
+                "telefone2": "1236218300"
+        }
+    },
+    {
+        "model": "buscaprest.Prestador",
+        "pk": 41,
+        "fields": {
+                "categoria": "vidro",
+                "prestador": "autoglass",
+                "endereco": "rua monte serrat 1097",
+                "bairro": "vila gomes cardim",
+                "cidade": "tatuape",
+                "cep": "xxxxxxxxxx",
+                "telefone2": "1932382300"
+            }
+    }
+]
