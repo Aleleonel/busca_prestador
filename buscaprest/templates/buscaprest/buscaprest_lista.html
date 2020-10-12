@@ -1,56 +1,47 @@
 {% extends "base.html" %}
+{% block css %}
+{% endblock css %}
 
 {% block content %}
 
-    <div class="col-3 search-div">
-         <form method="GET" id="search-form">
-             <label for="">Escolha a Categoria</label>
-             <input class="form-control" type="text" id="search" name="search">
-             <button type="submit">click Aqui!</button>
-         </form>
-     </div>
+    <div class="page-header">
+        <h2><i class="fa fa-user"></i>Lista de Prestadores</h2>
+        <div class="col-3 search-div">
+             <form method="GET" id="search-form">
+                 <label for="">Escolha a Categoria</label>
+                 <input class="form-control" type="text" id="search" name="search">
+                 <button type="submit">Busca</button>
+             </form>
+         </div>
 
-    {% for item in obj %}
-
-    <div class="container">
-        <address>
-            <strong>Categoria: {{item.categoria}}</strong><br>
-            <strong>Prestador:</strong> {{item.prestador}}<br>
-            <strong>Endereço:</strong> {{item.endereco}}<br>
-            <strong>Bairro:</strong> {{item.bairro}}<br>
-            <strong>CEP:</strong> {{item.cep}}<br>
-            <strong>Cidade:</strong> {{item.cidade}}<br>
-            <abbr title="Phone">P:</abbr> {{item.telefone2}}
-        </address>
-
-        <address>
-              <strong>Nome completo</strong><br>
-              <a href="mailto:#">first.last@example.com</a>
-        </address>
-
-    </div>
-    {% endfor %}
-
-    {%  for busca in buscando %}
-
-        <div class="container">
-
-            <address>
-                <strong>Categoria: {{busca.categoria}}</strong><br>
-                <strong>Prestador:</strong> {{busca.prestador}}<br>
-                <strong>Endereço:</strong> {{busca.endereco}}<br>
-                <strong>Bairro:</strong> {{busca.bairro}}<br>
-                <strong>CEP:</strong> {{busca.cep}}<br>
-                <strong>Cidade:</strong> {{busca.cidade}}<br>
-                <abbr title="Phone">P:</abbr> {{busca.telefone2}}
-            </address>
-
-            <address>
-                  <strong>Nome completo</strong><br>
-                  <a href="mailto:#">first.last@example.com</a>
-            </address>
-        </div>
-
-    {% endfor %}
+        {% if obj %}
+            <table class="table-striped">
+                <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Prestador</th>
+                    <th>Endereço</th>
+                    <th>Bairro</th>
+                    <th>CEP</th>
+                    <th>Telefone</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in obj %}
+                    <tr>
+                        <td>{{item.categoria}}</td>
+                        <td>{{item.prestador}}</td>
+                        <td>{{item.endereco}}</td>
+                        <td>{{item.bairro}}</td>
+                        <td>{{item.cep}}</td>
+                        <td>{{item.cidade}}</td>
+                        <td>{{item.telefone2}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="alert alert-warning">Sem prestadores na lista</p>
+        {% endif %}
 
 {% endblock %}
