@@ -13,6 +13,7 @@ class Prestador(models.Model):
 
     class Meta:
         db_table = 'prestador'
+        # ordering = ["-id"]
 
     def __str__(self):
         return self.prestador

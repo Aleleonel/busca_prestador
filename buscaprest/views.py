@@ -19,7 +19,7 @@ def lista(request):
         }
         return render(request, template_name, context)
     else:
-        obj = Prestador.objects.all().order_by('-pk')
+        obj = Prestador.objects.order_by("-id").all()
         context = {'obj': obj}
     return render(request, template_name, context)
 

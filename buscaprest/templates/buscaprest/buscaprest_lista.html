@@ -29,6 +29,7 @@
                 <tbody>
                 {% for item in obj %}
                     <tr>
+                        <td>{{item.id}}</td>
                         <td>{{item.categoria}}</td>
                         <td>
                             <a href="{{ detail.get_absolute_url }}">{{item.prestador}}</a>
@@ -43,7 +44,7 @@
                 </tbody>
             </table>
         {% else %}
-            <p class="alert alert-warning">Sem prestadores na lista</p>
+            <p class="alert alert-warning">Esta categoria não existe na lista ou foi digitada incorretamente!</p>
         {% endif %}
 
 {% endblock %}
