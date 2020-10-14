@@ -4,7 +4,7 @@ from . import views
 app_name = 'buscaprest'
 
 urlpatterns = [
-    path('home/', views.home, name='home'),
+    path('', views.home, name='home'),
     path('lista/', views.lista, name='buscaprest_lista'),
     path('<int:pk>/', views.prestadores_detail, name='prestadores_detail'),
 ]
