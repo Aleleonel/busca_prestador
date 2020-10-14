@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views import generic
+from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from .models import Prestador
 
 
@@ -9,25 +9,26 @@ def home(request):
 
 
 def lista(request):
-    model = Prestador
     template_name = 'buscaprest/buscaprest_lista.html'
     search = request.GET.get('search')
     if search:
-        obj = Prestador.objects.filter(categoria__icontains=search)
+        objects = Prestador.objects.filter(categoria__icontains=search)
         context = {
-            'obj': obj
+            'object_list': objects
         }
         return render(request, template_name, context)
     else:
-        obj = Prestador.objects.order_by("-id").all()
-        context = {'obj': obj}
+        objects = Prestador.objects.all()
+        context = {
+            'object_list': objects
+        }
+
     return render(request, template_name, context)
 
 
 def prestadores_detail(request, pk):
-    model = Prestador
     template_name = 'buscaprest/buscaprest_detail.html'
-    detail = Prestador.objects.get(pk=pk)
-    context = {'detail': detail}
+    obj = Prestador.objects.get(pk=pk)
+    context = {'object': obj}
     return render(request, template_name, context)
 

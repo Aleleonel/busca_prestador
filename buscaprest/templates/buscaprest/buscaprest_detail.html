@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="{% url 'buscaprest:buscaprest_list %}">Voltar</a>
-    <h1>{{ detail }}
+<a href="{% url 'buscaprest:buscaprest_lista' %}">Voltar</a>
+    <h1>{{ object }}
         <span class="pull-right">
             <a href="">
                 <button type="button" class="btn btn-success">
@@ -15,8 +15,30 @@
     <table class="table table-user-information">
         <tbody>
         <tr>
-            <th class="text-right">prestador</th>
+            <th class="text-right">Categoria</th>
+            <td>{{object.categoria}}</td>
         </tr>
+        <tr>
+            <th class="text-right">Prestador</th>
+            <td>{{object.prestador}}</td>
+        </tr>
+        <tr>
+            <th class="text-right">Endereço</th>
+            <td>{{object.endereco}}</td>
+        </tr>
+        <tr>
+            <th class="text-right">Bairro</th>
+            <td>{{object.bairro}}</td>
+        </tr>
+        <tr>
+            <th class="text-right">CEP</th>
+            <td>{{object.cep}}</td>
+        </tr>
+        <tr>
+            <th class="text-right">Telefone</th>
+            <td>{{object.telefone2}}</td>
+        </tr>
+
         </tbody>
     </table>
 

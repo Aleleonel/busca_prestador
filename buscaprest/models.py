@@ -19,5 +19,5 @@ class Prestador(models.Model):
         return self.prestador
 
     def get_absolute_url(self):
-        return reverse_lazy('buscaprest:buscaprest_detail', kwargs={'pk': self.pk})
+        return reverse_lazy('buscaprest:prestadores_detail', kwargs={'pk': self.pk})
 

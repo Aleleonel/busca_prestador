@@ -14,7 +14,7 @@
              </form>
          </div>
 
-        {% if obj %}
+        {% if object_list %}
             <table class="table-striped">
                 <thead>
                 <tr>
@@ -27,18 +27,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for item in obj %}
+                {% for object in object_list %}
                     <tr>
-                        <td>{{item.id}}</td>
-                        <td>{{item.categoria}}</td>
+                        <td>{{object.id}}</td>
+                        <td>{{object.categoria}}</td>
                         <td>
-                            <a href="{{ detail.get_absolute_url }}">{{item.prestador}}</a>
+                            <a href="{{ object.get_absolute_url }}">{{object.prestador}}</a>
                         </td>
-                        <td>{{item.endereco}}</td>
-                        <td>{{item.bairro}}</td>
-                        <td>{{item.cep}}</td>
-                        <td>{{item.cidade}}</td>
-                        <td>{{item.telefone2}}</td>
+                        <td>{{object.endereco}}</td>
+                        <td>{{object.bairro}}</td>
+                        <td>{{object.cep}}</td>
+                        <td>{{object.cidade}}</td>
+                        <td>{{object.telefone2}}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
