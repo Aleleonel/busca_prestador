@@ -32,3 +32,7 @@ def prestadores_detail(request, pk):
     context = {'object': obj}
     return render(request, template_name, context)
 
+
+def prestadores_add(request):
+    template_name = 'buscaprest/buscaprest_form.html'
+    return render(request, template_name)

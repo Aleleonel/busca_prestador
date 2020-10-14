@@ -5,7 +5,15 @@
 {% block content %}
 
     <div class="page-header">
-        <h2><i class="fa fa-user"></i>Lista de Prestadores</h2>
+        <h2>Lista de Prestadores
+            <span class="pull-right">
+                <a href="{% url 'buscaprest:prestadores_add' %}">
+                    <button type="button" class="btn btn-primary">
+                        <span class="fa fa-plus"></span>Adicionar
+                    </button>
+                </a>
+            </span>
+        </h2>
         <div class="col-3 search-div">
              <form method="GET" id="search-form">
                  <label for="">Escolha a Categoria</label>
