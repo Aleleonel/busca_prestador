@@ -6,7 +6,12 @@ from .models import Prestador
 
 
 def home(request):
-    template_name = 'home.html'
+    template_name = 'buscaprest/home.html'
+    return render(request, template_name)
+
+
+def my_static(request):
+    template_name = 'buscaprest/estatico.html'
     return render(request, template_name)
 
 

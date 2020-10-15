@@ -1,57 +1,66 @@
 {% extends "base.html" %}
+{% load static %}
 {% block css %}
 {% endblock css %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css"  href="{% static 'buscaprest/css/style.css' %}" />
 
-    <div class="page-header">
-        <h2>Lista de Prestadores
-            <span class="pull-right">
-                <a href="{% url 'buscaprest:prestadores_add' %}">
-                    <button type="button" class="btn btn-primary">
-                        <span class="fa fa-plus"></span>Adicionar
-                    </button>
-                </a>
-            </span>
-        </h2>
-        <div class="col-3 search-div">
-             <form method="GET" id="search-form">
-                 <label for="">Escolha a Categoria</label>
-                 <input class="form-control" type="text" id="search" name="search">
-                 <button type="submit">Busca</button>
-             </form>
-         </div>
+<body>
+	 <div class="jumbotron">
+      <div class="container">
+            <div class="page-header">
+                <h2>Lista de Prestadores
+                    <span class="pull-right">
+                        <a href="{% url 'buscaprest:prestadores_add' %}">
+                            <button type="button" class="btn btn-primary">
+                                <span class="fa fa-plus"></span>Adicionar
+                            </button>
+                        </a>
+                    </span>
+                </h2>
+                <div class="col-3 search-div">
+                     <form method="GET" id="search-form">
+                         <label for="">Escolha a Categoria</label>
+                         <input class="form-control" type="text" id="search" name="search">
+                         <button type="submit">Busca</button>
+                     </form>
+                 </div>
 
-        {% if object_list %}
-            <table class="table-striped">
-                <thead>
-                <tr>
-                    <th>Categoria</th>
-                    <th>Prestador</th>
-                    <th>Endereço</th>
-                    <th>Bairro</th>
-                    <th>CEP</th>
-                    <th>Telefone</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for object in object_list %}
-                    <tr>
-                        <td>{{object.categoria}}</td>
-                        <td>
-                            <a href="{{ object.get_absolute_url }}">{{object.prestador}}</a>
-                        </td>
-                        <td>{{object.endereco}}</td>
-                        <td>{{object.bairro}}</td>
-                        <td>{{object.cep}}</td>
-                        <td>{{object.cidade}}</td>
-                        <td>{{object.telefone2}}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        {% else %}
-            <p class="alert alert-warning">Esta categoria não existe na lista ou foi digitada incorretamente!</p>
-        {% endif %}
+                {% if object_list %}
+                    <table class="table-striped">
+                        <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Prestador</th>
+                            <th>Endereço</th>
+                            <th>Bairro</th>
+                            <th>CEP</th>
+                            <th>Telefone</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for object in object_list %}
+                            <tr>
+                                <td>{{object.categoria}}</td>
+                                <td>
+                                    <a href="{{ object.get_absolute_url }}">{{object.prestador}}</a>
+                                </td>
+                                <td>{{object.endereco}}</td>
+                                <td>{{object.bairro}}</td>
+                                <td>{{object.cep}}</td>
+                                <td>{{object.cidade}}</td>
+                                <td>{{object.telefone2}}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p class="alert alert-warning">Esta categoria não existe na lista ou foi digitada incorretamente!</p>
+                {% endif %}
+              </div>
+          </div>
+     </div>
+</body>
 
 {% endblock %}
