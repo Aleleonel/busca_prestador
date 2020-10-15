@@ -1,9 +1,11 @@
 from django import forms
+
+
 from .models import Prestador
 
 
-class PrestadoresForm(forms.ModelForm):
+class PrestadorForm(forms.ModelForm):
 
     class Meta:
-        model: Prestador
-        fields = 'all'
+        model = Prestador
+        fields = '__all__'

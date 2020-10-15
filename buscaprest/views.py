@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.views.generic import CreateView
+
+from .forms import PrestadorForm
 from .models import Prestador
 
 
@@ -36,3 +38,9 @@ def prestadores_detail(request, pk):
 def prestadores_add(request):
     template_name = 'buscaprest/buscaprest_form.html'
     return render(request, template_name)
+
+
+class PrestadorCreate(CreateView):
+    model = Prestador
+    template_name = 'buscaprest/buscaprest_form.html'
+    form_class = PrestadorForm
