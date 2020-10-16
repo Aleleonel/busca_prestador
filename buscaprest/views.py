@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import PrestadorForm
 from .models import Prestador
@@ -76,6 +76,12 @@ def prestadores_add(request):
 
 
 class PrestadorCreate(CreateView):
+    model = Prestador
+    template_name = 'buscaprest/buscaprest_form.html'
+    form_class = PrestadorForm
+
+
+class PrestadorUpdate(UpdateView):
     model = Prestador
     template_name = 'buscaprest/buscaprest_form.html'
     form_class = PrestadorForm
