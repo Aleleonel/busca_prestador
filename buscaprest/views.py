@@ -12,18 +12,48 @@ def home(request):
 
 def my_static(request):
     template_name = 'buscaprest/estatico.html'
-    return render(request, template_name)
-
-
-def lista(request):
-    template_name = 'buscaprest/buscaprest_lista.html'
     search = request.GET.get('search')
-    if search:
+    search2 = request.GET.get('search2')
+    if search and search2:
+        objects = Prestador.objects.filter(categoria__icontains=search, cidade__icontains=search2)
+        context = {
+            'object_list': objects
+        }
+        return render(request, template_name, context)
+    elif search:
         objects = Prestador.objects.filter(categoria__icontains=search)
         context = {
             'object_list': objects
         }
         return render(request, template_name, context)
+
+    else:
+        objects = Prestador.objects.all()
+        context = {
+            'object_list': objects
+        }
+
+    return render(request, template_name, context)
+
+
+def lista(request):
+    template_name = 'buscaprest/buscaprest_lista.html'
+    search = request.GET.get('search')
+    search2 = request.GET.get('search2')
+    if search and search2:
+        objects = Prestador.objects.filter(categoria__icontains=search, cidade__icontains=search2)
+        context = {
+            'object_list': objects
+        }
+        return render(request, template_name, context)
+
+    elif search:
+        objects = Prestador.objects.filter(categoria__icontains=search)
+        context = {
+            'object_list': objects
+        }
+        return render(request, template_name, context)
+
     else:
         objects = Prestador.objects.all()
         context = {

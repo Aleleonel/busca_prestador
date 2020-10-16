@@ -3,7 +3,14 @@ from django.urls import reverse_lazy, reverse
 
 
 class Prestador(models.Model):
-    categoria = models.CharField(max_length=60, null=True, blank=True)
+
+    CATEGORIA_CHOICES = (
+        ('MOTO', 'Moto'),
+        ('MECANICA', 'Mecanica'),
+        ('FUNILARIA', 'Funilaria'),
+        ('VIDRO', 'Vidro'),
+    )
+    categoria = models.CharField(max_length=60, choices=CATEGORIA_CHOICES, null=True, blank=True)
     prestador = models.CharField(max_length=60, null=True, blank=True)
     endereco = models.CharField(max_length=60, null=True, blank=True)
     bairro = models.CharField(max_length=60, null=True, blank=True)

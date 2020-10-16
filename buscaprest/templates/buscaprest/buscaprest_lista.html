@@ -5,6 +5,8 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css"  href="{% static 'buscaprest/css/style.css' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
 	 <div class="jumbotron">
@@ -19,13 +21,21 @@
                         </a>
                     </span>
                 </h2>
-                <div class="col-3 search-div">
-                     <form method="GET" id="search-form">
-                         <label for="">Escolha a Categoria</label>
-                         <input class="form-control" type="text" id="search" name="search">
-                         <button type="submit">Busca</button>
+
+                <div class="col-8 search-div">
+                     <form class="w3-container" method="GET" id="search-form">
+
+                         <label class="w3-text-teal "><b>Categoria</b></label>
+                         <input class="w3-input w3-border w3-light-grey" type="text" name="search">
+
+                         <label class="w3-text-teal"><b>Cidade</b></label>
+                         <input class="w3-input w3-border w3-light-grey" type="text"  name="search2">
+
+                         <button class="w3-btn w3-light-blue" type="submit">Busca</button>
+
                      </form>
                  </div>
+                <div class="container"></div>
 
                 {% if object_list %}
                     <table class="table-striped">
