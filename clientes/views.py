@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import ClienteForm
 from .models import Cliente
@@ -31,7 +31,7 @@ def clientes_list(request):
         obj = Cliente.objects.all()
         context = {
             'obj': obj,
-            }
+        }
     return render(request, template_name, context)
 
 
@@ -48,6 +48,12 @@ def clientes_add(request):
 
 
 class ClienteCreate(CreateView):
+    model = Cliente
+    template_name = 'clientes/cliente_form.html'
+    form_class = ClienteForm
+
+
+class ClienteUpdate(UpdateView):
     model = Cliente
     template_name = 'clientes/cliente_form.html'
     form_class = ClienteForm

@@ -2,9 +2,9 @@
 
 {% block content %}
 <a href="{% url 'clientes:clientes_list' %}">Voltar</a>
-    <h1>{{ obj }}
+    <h1>{{ object }}
         <span class="pull-right">
-            <a href="#">
+            <a href="{% url 'clientes:clientes_edit' object.pk %}">
                 <button type="button" class="btn btn-success">
                     <span class="fa fa-pencil"></span> Editar
                 </button>
@@ -23,7 +23,7 @@
             <td>{{object.endereco}}</td>
         </tr>
         <tr>
-            <th class="text-right">Nome</th>
+            <th class="text-right">CPF</th>
             <td>{{object.cpf}}</td>
         </tr>
         <tr>
@@ -48,7 +48,7 @@
         </tr>
         <tr>
             <th class="text-right">Data Instalação</th>
-            <td>{{object.data_instalado}}</td>
+            <td>{{object.data_instalcao}}</td>
         </tr>
         <tr>
             <th class="text-right">Retirado</th>

@@ -43,10 +43,12 @@
                         <tr>
                             <th>Nome</th>
                             <th>Endereço</th>
-                            <th>cpf</th>
-                            <th>Telefone01</th>
+                            <th>Telefone</th>
                             <th>Veiculo</th>
-                            <th>rastreadores</th>
+                            <th>Rastreadores</th>
+                            <th>Retirado</th>
+                            <th>Instalado</th>
+
 
                         </tr>
                         </thead>
@@ -57,10 +59,12 @@
                                     <a href="{{ object.get_absolute_url }}">{{object.nome}}</a>
                                 </td>
                                 <td>{{object.endereco}}</td>
-                                <td>{{object.cpf}}</td>
                                 <td>{{object.telefone01}}</td>
                                 <td>{{object.veiculo}}</td>
                                 <td>{{object.rastreador}}</td>
+                                <td>{{object.retirado}}</td>
+                                <td>{{object.instalado}}</td>
+
                             </tr>
                         {% endfor %}
                         </tbody>
