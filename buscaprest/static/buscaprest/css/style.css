@@ -1,4 +1,20 @@
-body{
-	background-color: #add8e6;
+body {
+  background-color: lightblue;
 }
 
+h1, h3 {
+  color: navy;
+  margin-left: 30px;
+}
+
+
+label {
+    display: block;
+}
+
+input, button {
+    padding: 10px;
+}
+input {
+    width: 50%;
+}

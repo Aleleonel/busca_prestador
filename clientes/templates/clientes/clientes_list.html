@@ -12,7 +12,7 @@
 	 <div class="jumbotron">
       <div class="container">
             <div class="page-header">
-                <h2>Lista de Clientes
+                <h1>Rastreadores
                     <span class="pull-right">
                         <a href="{% url 'clientes:clientes_add' %}">
                             <button type="button" class="btn btn-primary">
@@ -20,21 +20,17 @@
                             </button>
                         </a>
                     </span>
-                </h2>
+                </h1>
 
-                <div class=" search-div">
-                     <form class="w3-container" method="GET" id="search-form">
+               <form method="GET" id="search-form">
+                    <label for="busca">Placa</label>
+                    <input type="search" id="#" name="search">
+                    <button type="submit">&#128269;</button>
 
-                         <label class="w3-text-teal "><b>Placa</b></label>
-                         <input class="w3-input w3-border w3-light-grey" type="text" name="search">
-
-                         <label class="w3-text-teal"><b>Nr. Rastreador</b></label>
-                         <input class="w3-input w3-border w3-light-grey" type="text"  name="search2">
-
-                         <button class="w3-btn w3-light-blue" type="submit">Busca</button>
-
-                     </form>
-                 </div>
+                    <label for="busca">Nr. Rastreador</label>
+                    <input type="search" id="busca" name="search2">
+                    <button type="submit">&#128269;</button>
+                </form>
                 <div class="container"></div>
 
                 {% if obj %}
@@ -70,11 +66,12 @@
                         </tbody>
                     </table>
                 {% else %}
-                    <p class="alert alert-warning">Esta Cliente não existe na lista ou foi digitada incorretamente!</p>
+                    <p class="alert alert-warning">Esta Cliente não existe na lista ou foi digitado incorretamente!</p>
                 {% endif %}
               </div>
           </div>
      </div>
+        {% include "includes/pagination.html" %}
 </body>
 
 {% endblock %}

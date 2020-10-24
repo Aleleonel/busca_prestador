@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, UpdateView
-
+from django.views.generic import CreateView, UpdateView, ListView
+from django.core.paginator import Paginator
 from .forms import PrestadorForm
 from .models import Prestador
 
@@ -41,26 +41,45 @@ def lista(request):
     search = request.GET.get('search')
     search2 = request.GET.get('search2')
     if search and search2:
-        objects = Prestador.objects.filter(categoria__icontains=search, cidade__icontains=search2)
+
+        objects_list = Prestador.objects.filter(categoria__icontains=search, cidade__icontains=search2)
+        paginator = Paginator(objects_list, 10)
+        page = request.GET.get('page')
+        objects = paginator.get_page(page)
         context = {
             'object_list': objects
         }
         return render(request, template_name, context)
 
     elif search:
-        objects = Prestador.objects.filter(categoria__icontains=search)
+
+        objects_list = Prestador.objects.filter(categoria__icontains=search)
+        paginator = Paginator(objects_list, 10)
+        page = request.GET.get('page')
+        objects = paginator.get_page(page)
+
         context = {
             'object_list': objects
         }
         return render(request, template_name, context)
 
     else:
-        objects = Prestador.objects.all()
+
+        objects_list = Prestador.objects.all()
+        paginator = Paginator(objects_list, 10)
+        page = request.GET.get('page')
+        objects = paginator.get_page(page)
         context = {
             'object_list': objects
         }
 
     return render(request, template_name, context)
+
+
+class PrestadoresList(ListView):
+    model = Prestador
+    template_name = 'buscaprest/buscaprest_lista.html'
+    paginate_by = 10
 
 
 def prestadores_detail(request, pk):

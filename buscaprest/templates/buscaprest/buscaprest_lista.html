@@ -12,7 +12,7 @@
 	 <div class="jumbotron">
       <div class="container">
             <div class="page-header">
-                <h2>Lista de Prestadores
+                <h1>Oficinas
                     <span class="pull-right">
                         <a href="{% url 'buscaprest:prestadores_add' %}">
                             <button type="button" class="btn btn-primary">
@@ -20,21 +20,19 @@
                             </button>
                         </a>
                     </span>
-                </h2>
+                </h1>
 
-                <div class="col-8 search-div">
-                     <form class="w3-container" method="GET" id="search-form">
 
-                         <label class="w3-text-teal "><b>Categoria</b></label>
-                         <input class="w3-input w3-border w3-light-grey" type="text" name="search">
+                <form method="GET" id="search-form">
+                    <label for="busca">Categoria</label>
+                    <input type="search" id="#" name="search1">
+                    <button type="submit">&#128269;</button>
 
-                         <label class="w3-text-teal"><b>Cidade</b></label>
-                         <input class="w3-input w3-border w3-light-grey" type="text"  name="search2">
+                    <label for="busca">Cidade</label>
+                    <input type="search" id="busca" name="search2">
+                    <button type="submit">&#128269;</button>
+                </form>
 
-                         <button class="w3-btn w3-light-blue" type="submit">Busca</button>
-
-                     </form>
-                 </div>
                 <div class="container"></div>
 
                 {% if object_list %}
@@ -46,6 +44,7 @@
                             <th>Endereço</th>
                             <th>Bairro</th>
                             <th>CEP</th>
+                            <th>Cidadde</th>
                             <th>Telefone</th>
                         </tr>
                         </thead>
@@ -70,6 +69,7 @@
                 {% endif %}
               </div>
           </div>
+         {% include "includes/pagination.html" %}
      </div>
 </body>
 
